@@ -217,7 +217,8 @@
 * password = 5Te8Y4drgCRfCx8ugdwuEX8KFC6k2EUu
 
   ######Things we have to do and the results
-
+{
+ }
     bandit12@melinda:~$ ls
     data.txt
     bandit12@melinda:~$ cat data.txt
@@ -225,88 +226,9 @@
     0000010:	6269	6e00	013a	02c5	fd42	5a68	3931	4159	bin..:...BZh91AY
     0000020:	2653	5915	d9db	2800	0017	7fff	ff5d	f6ea	&SY...(......]..
     0000030:	e98b	bff6	ff7f	ffbf	fce3	f7fa	a3fb	badb	................
-    0000040:	f3e9	f873	b7ff	fcff	cffb	7bff	b001	3b35	...s......{...;5
-    0000050:	b080	d000	0000	0000	1ea0	f534	3400	0d00	...........44...
-    0000060:	d1a1	a1a1	a006	8680	0006	9ea0	6868	68f4	............hhh.
-    0000070:	81b5	0d34	d0c2	0d0d	3d13	47a4	cd44	01a1	...4....=.G..D..
-    0000080:	a007	a801	a000	d1a0	d00d	0034	0640	1ea3	...........4.@..
-    0000090:	4c99	0000	d034	d1b5	3201	a0d1	a06d	4003	L....4..2....m@.
-    00000a0:	d403	351a	00f4	2347	a801	9348	1a7a	8034	..5...#G...H.z.4
-    00000b0:	d340	0000	0006	690d	0000	0340	0d3d	46d1	.@....i....@.=F.
-    00000c0:	341a	7a86	8190	1a1a	1a34	347a	8d00	001a	4.z......44z....
-    00000d0:	6468	d006	8001	0403	0081	e752	1ca1	324a	dh.........R..2J
-    00000e0:	2d8d	2082	b927	606a	8dc4	4407	d0eb	1428	-. ..'`j..D....(
-    00000f0:	8782	7c75	29f4	19d4	3b6a	1f7e	147f	5636	..|u)...;j.~..V6
-    0000100:	0183	4dbf	9a5d	968c	7340	d299	dd22	3024	..M..]..s@..."0$
-    0000110:	8ecc	1ffe	92b3	101b	ca86	20bd	47f2	7958	.......... .G.yX
-    0000120:	7d40	d62a	1dc8	8697	d109	66ae	1549	39df	}@.*......f..I9.
-    0000130:	95e2	2dad	4990	b250	9a0b	f842	0ade	e4fb	..-.I..P...B....
-    0000140:	2717	ba73	0a60	9048	c4db	851b	db3c	0e4d	'..s.`.H.....<.M
-    0000150:	9d04	a542	3d98	a411	65b8	116f	0710	19e3	...B=...e..o....
-    0000160:	210a	11d4	b9bc	5227	c02e	f8ac	fab6	f541	!.....R'.......A
-    0000170:	f934	9619	a951	6654	8482	4fd2	9ce7	af09	.4...QfT..O.....
-    0000180:	0ed5	e29c	3482	e515	3882	07b5	8a2b	02e7	....4...8....+..
-    0000190:	5357	2cd5	c071	3d10	546c	d9e2	aa49	a75c	SW,..q=.Tl...I.\
-    00001a0:	2ada	f467	469d	4464	c20e	f8f0	17d3	271d	*..gF.Dd......'.
-    00001b0:	e3c6	ac3a	9f96	d17f	897c	04bf	c445	d6bc	...:.....|...E..
-    00001c0:	a706	16b0	34bf	2f1b	3419	9eea	5d5a	f7c0	....4./.4...]Z..
-    00001d0:	1ce4	5477	832b	2258	6b29	55ec	2155	2e66	..Tw.+"Xk)U.!U.f
-    00001e0:	2ad1	81d1	edd0	22fe	0f6c	9172	b0d2	3b93	*....."..l.r..;.
-    00001f0:	42b3	079e	8013	c6ef	1425	82fe	a53b	1898	B........%...;..
-    0000200:	c9b5	2111	5c53	eb19	6142	a8b6	480a	a8eb	..!.\S..aB..H...
-    0000210:	439e	b18f	9269	890e	dcec	da54	614c	4eba	C....i.....TaLN.
-    0000220:	fe8c	5c10	6586	1321	680b	9896	fdee	b1d5	..\.e..!h.......
-    0000230:	8e68	d49a	11d4	868d	7e82	3238	4e13	dd44	.h......~.28N..D
-    0000240:	9ad4	0081	b138	f17f	e2ee	48a7	0a12	02bb	.....8....H.....
-    0000250:	3b65	0018	d921	743a	0200	00			;e...!t:...
-    bandit12@melinda:~$ mkdir -p /tmp/simple-plan/
-    bandit12@melinda:~$ cp data.txt /tmp/simple-plan/
-    bandit12@melinda:~$ cd /tmp/simple-plan/
-    bandit12@melinda:/tmp/simple-plan$ ls
-    data.txt
-    bandit12@melinda:/tmp/simple-plan$ xxd -r data.txt > banditfile
-    bandit12@melinda:/tmp/simple-plan$ file banditfile 
-    banditfile: gzip compressed data, was "data2.bin", from Unix, last modified: Thu Jun  6 13:59:44 2013, max compression
-    bandit12@melinda:/tmp/simple-plan$ mv banditfile banditfile.gz
-    bandit12@melinda:/tmp/simple-plan$ gzip -d banditfile.gz 
-    bandit12@melinda:/tmp/simple-plan$ ls
-    banditfile  data.txt
-    bandit12@melinda:/tmp/simple-plan$ file banditfile 
-    banditfile: bzip2 compressed data, block size = 900k
-    bandit12@melinda:/tmp/simple-plan$ mv banditfile banditfile.bz2
-    bandit12@melinda:/tmp/simple-plan$ bzip2 -d banditfile.bz2 
-    bandit12@melinda:/tmp/simple-plan$ ls
-    banditfile  data.txt
-    bandit12@melinda:/tmp/simple-plan$ file banditfile 
-    banditfile: gzip compressed data, was "data4.bin", from Unix, last modified: Thu Jun  6 13:59:43 2013, max compression
-    bandit12@melinda:/tmp/simple-plan$ mv banditfile banditfile.gz
-    bandit12@melinda:/tmp/simple-plan$ gzip -d banditfile.gz 
-    bandit12@melinda:/tmp/simple-plan$ ls
-    banditfile  data.txt
-    bandit12@melinda:/tmp/simple-plan$ file banditfile 
-    banditfile: POSIX tar archive (GNU)
-    bandit12@melinda:/tmp/simple-plan$ tar -xvf banditfile 
-    data5.bin
-    bandit12@melinda:/tmp/simple-plan$ file data5.bin 
-    data5.bin: POSIX tar archive (GNU)
-    bandit12@melinda:/tmp/simple-plan$ tar -xvf data5.bin  
-    data6.bin
-    bandit12@melinda:/tmp/simple-plan$ file data6.bin 
-    data6.bin: bzip2 compressed data, block size = 900k
-    bandit12@melinda:/tmp/simple-plan$ mv data6.bin banditfile.bz2
-    bandit12@melinda:/tmp/simple-plan$ bzip2 -d banditfile.bz2 
-    bandit12@melinda:/tmp/simple-plan$ ls
-    banditfile  data.txt
-    bandit12@melinda:/tmp/simple-plan$ file banditfile 
-    banditfile: POSIX tar archive (GNU)
-    bandit12@melinda:/tmp/simple-plan$ tar -xvf banditfile 
-    data8.bin
-    bandit12@melinda:/tmp/simple-plan$ file data8.bin 
-    data8.bin: gzip compressed data, was "data9.bin", from Unix, last modified: Thu Jun  6 13:59:43 2013, max compression
-    bandit12@melinda:/tmp/simple-plan$ mv data8.bin data8.gz ; gzip -d data8.gz 
-    bandit12@melinda:/tmp/simple-plan$ file data8 
-    data8: ASCII text
-    
+ {
+
+  }    
     bandit12@melinda:/tmp/simple-plan$ cat data8 
     The password is 8ZjyCRiBWFYkneahHwxCv3wb2a1ORpYL
   
@@ -324,29 +246,8 @@
     MIIEpAIBAAKCAQEAxkkOE83W2cOT7IWhFc9aPaaQmQDdgzuXCv+ppZHa++buSkN+
     gg0tcr7Fw8NLGa5+Uzec2rEg0WmeevB13AIoYp0MZyETq46t+jk9puNwZwIt9XgB
     ZufGtZEwWbFWw/vVLNwOXBe4UWStGRWzgPpEeSv5Tb1VjLZIBdGphTIK22Amz6Zb
-    ThMsiMnyJafEwJ/T8PQO3myS91vUHEuoOMAzoUID4kN0MEZ3+XahyK0HJVq68KsV
-    ObefXG1vvA3GAJ29kxJaqvRfgYnqZryWN7w3CHjNU4c/2Jkp+n8L0SnxaNA+WYA7
-    jiPyTF0is8uzMlYQ4l1Lzh/8/MpvhCQF8r22dwIDAQABAoIBAQC6dWBjhyEOzjeA
-    J3j/RWmap9M5zfJ/wb2bfidNpwbB8rsJ4sZIDZQ7XuIh4LfygoAQSS+bBw3RXvzE
-    pvJt3SmU8hIDuLsCjL1VnBY5pY7Bju8g8aR/3FyjyNAqx/TLfzlLYfOu7i9Jet67
-    xAh0tONG/u8FB5I3LAI2Vp6OviwvdWeC4nOxCthldpuPKNLA8rmMMVRTKQ+7T2VS
-    nXmwYckKUcUgzoVSpiNZaS0zUDypdpy2+tRH3MQa5kqN1YKjvF8RC47woOYCktsD
-    o3FFpGNFec9Taa3Msy+DfQQhHKZFKIL3bJDONtmrVvtYK40/yeU4aZ/HA2DQzwhe
-    ol1AfiEhAoGBAOnVjosBkm7sblK+n4IEwPxs8sOmhPnTDUy5WGrpSCrXOmsVIBUf
-    laL3ZGLx3xCIwtCnEucB9DvN2HZkupc/h6hTKUYLqXuyLD8njTrbRhLgbC9QrKrS
-    M1F2fSTxVqPtZDlDMwjNR04xHA/fKh8bXXyTMqOHNJTHHNhbh3McdURjAoGBANkU
-    1hqfnw7+aXncJ9bjysr1ZWbqOE5Nd8AFgfwaKuGTTVX2NsUQnCMWdOp+wFak40JH
-    PKWkJNdBG+ex0H9JNQsTK3X5PBMAS8AfX0GrKeuwKWA6erytVTqjOfLYcdp5+z9s
-    8DtVCxDuVsM+i4X8UqIGOlvGbtKEVokHPFXP1q/dAoGAcHg5YX7WEehCgCYTzpO+
-    xysX8ScM2qS6xuZ3MqUWAxUWkh7NGZvhe0sGy9iOdANzwKw7mUUFViaCMR/t54W1
-    GC83sOs3D7n5Mj8x3NdO8xFit7dT9a245TvaoYQ7KgmqpSg/ScKCw4c3eiLava+J
-    3btnJeSIU+8ZXq9XjPRpKwUCgYA7z6LiOQKxNeXH3qHXcnHok855maUj5fJNpPbY
-    iDkyZ8ySF8GlcFsky8Yw6fWCqfG3zDrohJ5l9JmEsBh7SadkwsZhvecQcS9t4vby
-    9/8X4jS0P8ibfcKS4nBP+dT81kkkg5Z5MohXBORA7VWx+ACohcDEkprsQ+w32xeD
-    qT1EvQKBgQDKm8ws2ByvSUVs9GjTilCajFqLJ0eVYzRPaY6f++Gv/UVfAPV4c+S0
-    kAWpXbv5tbkkzbS0eaLPTKgLzavXtQoTtKwrjpolHKIHUz6Wu+n4abfAIRFubOdN
-    /+aLoRQ0yBDRbdXMsZN/jvY44eM+xRLdRVyMmdPtP8belRi2E2aEzA==
-    -----END RSA PRIVATE KEY-----
+{
+}
     bandit13@melinda:~$ ssh -i ./sshkey.private bandit14@localhost
     Could not create directory '/home/bandit13/.ssh'.
     The authenticity of host 'localhost (127.0.0.1)' can't be established.
@@ -540,13 +441,7 @@
     boobiesbot-check	cronjob_bandit24	manpage3_resetpw_job	natas26_cleanup	semtex0-ppc	semtex6	vortex0
     cron-apt	eloi0	natas-session-toucher	php5	semtex10	semtex8	vortex20
     cronjob_bandit22	eloi1	natas-stats	semtex0-32	semtex12	semtex9	vulnbot0-check
-    cronjob_bandit23	hintbot-check	natas25_cleanup	semtex0-64	semtex5	sysstat	vulnbot1-check
-    bandit21@melinda:/etc/cron.d$ cat cronjob_bandit22
-    * * * * * bandit22 /usr/bin/cronjob_bandit22.sh &> /dev/null
-    bandit21@melinda:/etc/cron.d$ cat /usr/bin/cronjob_bandit22.sh
-    #!/bin/bash
-    chmod 644 /tmp/t7O6lds9S0RqQh9aMcz6ShpAoZKF7fgv
-    cat /etc/bandit_pass/bandit22 > /tmp/t7O6lds9S0RqQh9aMcz6ShpAoZKF7fgv
+
     
     bandit21@melinda:/etc/cron.d$ cat /tmp/t7O6lds9S0RqQh9aMcz6ShpAoZKF7fgv
     Yk7owGAcWjwMVRwrTesJEwB7WVOiILLI
@@ -567,7 +462,7 @@
     bandit22@melinda:/etc/cron.d$ cat cronjob_bandit23
     * * * * * bandit23 /usr/bin/cronjob_bandit23.sh  &> /dev/null
     bandit22@melinda:/etc/cron.d$ cat /usr/bin/cronjob_bandit23.sh
-    #!/bin/bash
+
     
     myname=$(whoami)
     mytarget=$(echo I am user $myname | md5sum | cut -d ' ' -f 1)
@@ -599,7 +494,6 @@
     bandit23@melinda:/etc/cron.d$ cat cronjob_bandit24 
     * * * * * bandit24 /usr/bin/cronjob_bandit24.sh &> /dev/null
     bandit23@melinda:/etc/cron.d$ cat /usr/bin/cronjob_bandit24.sh
-    #!/bin/bash
     
     myname=$(whoami)
     
@@ -639,9 +533,4 @@
     Congratulations on solving the last level of this game!
     
     
-####level 25 to Level 26
 
-* username = bandit22
-* password = UoMYTrfrBFHyQXmg6gzctqAwOmw1IohZ
-
-  ######Things we have to do and the results
