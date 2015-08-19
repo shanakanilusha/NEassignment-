@@ -508,7 +508,7 @@
     bandit23@melinda:/var/spool/bandit24$ mkdir -p /tmp/level24
     bandit23@melinda:/var/spool/bandit24$ cd /tmp/level24
     bandit23@melinda:/tmp/level24$ vim sp.sh
-    #!/bin/sh
+ 
     cat /etc/bandit_pass/bandit24 >> /tmp/level24/bandit24
     touch /tmp/level24/ok
     bandit23@melinda:/tmp/level24$ chmod 777 sp.sh 
