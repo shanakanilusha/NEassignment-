@@ -10,6 +10,7 @@
 * password = bandit0
 
   ######Things we have to do and the results
+  “cat” it and grab the password for level1
 
     bandit0@melinda:~$ ls
     readme
@@ -23,7 +24,8 @@
 * username = bandit1
 * password = boJ9jbbUNNfktd78OOpsqOltutMc3MY1
 
-  ######Things we have to do and the results 
+  ######Things we have to do and the results
+  delimit the dash to read it
 
     bandit1@melinda:~$ ls
     -
@@ -53,20 +55,16 @@
 * password = UmHadQclWmgdLOKQ3YNgjWxGoRMb5luK
 
   ######Things we have to do and the results
-    bandit3@melinda:~$ ls
-    inhere
-
-    bandit3@melinda:~$ cd inhere/
-    bandit3@melinda:~/inhere$ ls
-
-    bandit3@melinda:~/inhere$ ls -al
-    total 12
-    drwxr-xr-x 2 root    root    4096 Jun  6  2013 .
-    drwxr-xr-x 3 root    root    4096 Jun  6  2013 ..
-    -rw-r----- 1 bandit4 bandit3   33 Jun  6  2013 .hidden
-
-    bandit3@melinda:~/inhere$ cat .hidden 
-    pIwrPrtPN36QITSp3EQaw936yaFoFgAB
+bandit3@melinda:~$ ls
+inhere
+bandit3@melinda:~$ cd inhere
+bandit3@melinda:~/inhere$ ls -la
+total 12
+drwxr-xr-x 2 root    root    4096 Nov 14  2014 .
+drwxr-xr-x 3 root    root    4096 Nov 14  2014 ..
+-rw-r----- 1 bandit4 bandit3   33 Nov 14  2014 .hidden
+bandit3@melinda:~/inhere$ cat .hidden
+pIwrPrtPN36QITSp3EQaw936yaFoFgAB
     
     
     
@@ -77,21 +75,37 @@
 * password = pIwrPrtPN36QITSp3EQaw936yaFoFgAB
 
   ######Things we have to do and the results
+  password is somewhere in the inhere directory and is the only human readable file in the directory
     bandit4@melinda:~$ ls
-    inhere
-
-    bandit4@melinda:~$ cd inhere/
-    bandit4@melinda:~/inhere$ ls
-    -file00  -file01  -file02  -file03  -file04  -file05  -file06  -file07  -file08  -file09
-
-    bandit4@melinda:~/inhere$ for f in ./*; do cat $f; done;
-    �S�U� �&� �?�?ɦ�7 ��n�| ����/�$�Q�J
-    ��NO2���s�� =\�� 1�OF��
-    4��<�o�l�����՚�~{b�W�$�s<��~(����Å�8��b
-    dhz��c�
-    g7�!�x �Ӈ��Eo[� �B�
-    ���& 6] �U �w޽RZ!N�o�h��)�'߳e�l�?-p#��s ���~�$�������<��Dj�N#C � �0�|���T����G�@���koReBOKuIDDepwhWk7jZC0RTdopnAYKh
-    ��d C�g�b�.< ��"Q 2B����{����3S�~і�����|�M�^߮�-%ƌ
+inhere
+bandit4@melinda:~$ cd inhere
+bandit4@melinda:~/inhere$ ls -la
+total 48
+-rw-r----- 1 bandit5 bandit4   33 Nov 14  2014 -file00
+-rw-r----- 1 bandit5 bandit4   33 Nov 14  2014 -file01
+-rw-r----- 1 bandit5 bandit4   33 Nov 14  2014 -file02
+-rw-r----- 1 bandit5 bandit4   33 Nov 14  2014 -file03
+-rw-r----- 1 bandit5 bandit4   33 Nov 14  2014 -file04
+-rw-r----- 1 bandit5 bandit4   33 Nov 14  2014 -file05
+-rw-r----- 1 bandit5 bandit4   33 Nov 14  2014 -file06
+-rw-r----- 1 bandit5 bandit4   33 Nov 14  2014 -file07
+-rw-r----- 1 bandit5 bandit4   33 Nov 14  2014 -file08
+-rw-r----- 1 bandit5 bandit4   33 Nov 14  2014 -file09
+drwxr-xr-x 2 root    root    4096 Nov 14  2014 .
+drwxr-xr-x 3 root    root    4096 Nov 14  2014 ..
+bandit4@melinda:~/inhere$ file ./-*
+./-file00: data
+./-file01: data
+./-file02: data
+./-file03: data
+./-file04: data
+./-file05: data
+./-file06: data
+./-file07: ASCII text
+./-file08: data
+./-file09: data
+bandit4@melinda:~/inhere$ cat ./-file07
+koReBOKuIDDepwhWk7jZC0RTdopnAYKh
   
 
 ####level 5 to Level 6
@@ -100,20 +114,40 @@
 * password = koReBOKuIDDepwhWk7jZC0RTdopnAYKh
 
   ######Things we have to do and the results
-    bandit5@melinda:~$ ls
-    inhere
-
-    bandit5@melinda:~/inhere$ ls
-    maybehere00  maybehere02  maybehere04  maybehere06  maybehere08  maybehere10 
-    maybehere12  maybehere14  maybehere16  maybehere18
-    maybehere01  maybehere03  maybehere05  maybehere07  maybehere09  maybehere11 
-    maybehere13  maybehere15  maybehere17  maybehere19
-
-    bandit5@melinda:~/inhere$ find -readable -size 1033c ! -executable
-    ./maybehere07/.file2
-
-    bandit5@melinda:~/inhere$ cat ./maybehere07/.file2
-    DXjZPULLxYr17uwoI01bNLQbtFemEgo7
+  similar to the level 4 to level 5
+  
+  
+    bandit5@melinda:~$ ls 
+inhere
+bandit5@melinda:~$ cd inhere
+bandit5@melinda:~/inhere$ ls -la
+total 88
+drwxr-x--- 22 root bandit5 4096 Nov 14  2014 .
+drwxr-xr-x  3 root root    4096 Nov 14  2014 ..
+drwxr-x---  2 root bandit5 4096 Nov 14  2014 maybehere00
+drwxr-x---  2 root bandit5 4096 Nov 14  2014 maybehere01
+drwxr-x---  2 root bandit5 4096 Nov 14  2014 maybehere02
+drwxr-x---  2 root bandit5 4096 Nov 14  2014 maybehere03
+drwxr-x---  2 root bandit5 4096 Nov 14  2014 maybehere04
+drwxr-x---  2 root bandit5 4096 Nov 14  2014 maybehere05
+drwxr-x---  2 root bandit5 4096 Nov 14  2014 maybehere06
+drwxr-x---  2 root bandit5 4096 Nov 14  2014 maybehere07
+drwxr-x---  2 root bandit5 4096 Nov 14  2014 maybehere08
+drwxr-x---  2 root bandit5 4096 Nov 14  2014 maybehere09
+drwxr-x---  2 root bandit5 4096 Nov 14  2014 maybehere10
+drwxr-x---  2 root bandit5 4096 Nov 14  2014 maybehere11
+drwxr-x---  2 root bandit5 4096 Nov 14  2014 maybehere12
+drwxr-x---  2 root bandit5 4096 Nov 14  2014 maybehere13
+drwxr-x---  2 root bandit5 4096 Nov 14  2014 maybehere14
+drwxr-x---  2 root bandit5 4096 Nov 14  2014 maybehere15
+drwxr-x---  2 root bandit5 4096 Nov 14  2014 maybehere16
+drwxr-x---  2 root bandit5 4096 Nov 14  2014 maybehere17
+drwxr-x---  2 root bandit5 4096 Nov 14  2014 maybehere18
+drwxr-x---  2 root bandit5 4096 Nov 14  2014 maybehere19
+bandit5@melinda:~/inhere$ find ./ -size 1033c
+./maybehere07/.file2
+bandit5@melinda:~/inhere$ cat ./maybehere07/.file2
+DXjZPULLxYr17uwoI01bNLQbtFemEgo7
 
 
 ####level 6 to Level 7
@@ -135,6 +169,9 @@
 * password = HKBPTKQnIay4Fw76bEy8PVxKEDQRKTzs
 
   ######Things we have to do and the results
+  password for the next level is stored in the file data.txt
+  
+  
     bandit7@melinda:~$ ls
     data.txt
 
@@ -147,6 +184,8 @@
 * password = cvX2JJa4CFALtqS87jk27qwqGhBM9plV
 
   ######Things we have to do and the results
+  we need to find a unique line among many, so we have to pipe so commands
+  
 
     bandit8@melinda:~$ ls
     data.txt
@@ -161,6 +200,9 @@
 * password = UsvVyFSfZZWbi6wgC7dAFyFuR6jQQUhR
 
   ######Things we have to do and the results
+  The password for the next level is stored in the file called data.txt among of few lines of human-readable strings starting with ‘=’ characters
+  
+  
     bandit9@melinda:~$ ls
     data.txt
     bandit9@melinda:~$ strings data.txt | grep "="
@@ -186,6 +228,9 @@
 * password = truKLdjsbJ5g7yyJ2X2R0o3a5HQJFuLk
 
   ######Things we have to do and the results
+  passwordis stored in the file data.txt, which contains base64 encoded data, so we need to decord this file
+
+  
     bandit10@melinda:~$ ls
     data.txt
     bandit10@melinda:~$ cat data.txt
@@ -201,6 +246,8 @@
 * password = IFukwKGsFW8MOq3IRFqrxE1hxTNEbUPR
 
   ######Things we have to do and the results
+  the password is encoded using simple rot13 encryption
+  
     bandit11@melinda:~$ ls
     data.txt
     bandit11@melinda:~$ cat data.txt
@@ -214,23 +261,63 @@
 ####level 12 to Level 13
 
 * username = bandit12
-* password = 5Te8Y4drgCRfCx8ugdwuEX8KFC6k2EUu
+* password = 8ZjyCRiBWFYkneahHwxCv3wb2a1ORpYL
 
   ######Things we have to do and the results
-{
- }
-    bandit12@melinda:~$ ls
-    data.txt
-    bandit12@melinda:~$ cat data.txt
-    0000000:	1f8b	0808	d095	b051	0203	6461	7461	322e	.......Q..data2.
-    0000010:	6269	6e00	013a	02c5	fd42	5a68	3931	4159	bin..:...BZh91AY
-    0000020:	2653	5915	d9db	2800	0017	7fff	ff5d	f6ea	&SY...(......]..
-    0000030:	e98b	bff6	ff7f	ffbf	fce3	f7fa	a3fb	badb	................
- {
+  the password for the next level is stored in the file data.txt, which is a hexdump of a file that has been repeatedly compressed.
+  
+  
+bandit12@melinda:~$ ls
+data.txt
+bandit12@melinda:~$ file data.txt
+data.txt: ASCII text
+bandit12@melinda:~$ mkdir /tmp/vvv
+bandit12@melinda:~$ cd /tmp/vvv
+bandit12@melinda:/tmp/vvv$ xxd -r ~/data.txt > data.txt
+bandit12@melinda:/tmp/vvv$ file data.txt
+data.txt: gzip compressed data, was "data2.bin", from Unix, last modified: Fri Nov 14 10:32:20 2014, max compression
+bandit12@melinda:/tmp/vvv$ zcat data.txt > dataNew
+bandit12@melinda:/tmp/vvv$ ls
+data.txt  dataNew
+bandit12@melinda:/tmp/vvv$ file dataNew
+dataNew: bzip2 compressed data, block size = 900k
+bandit12@melinda:/tmp/vvv$ bzip2 -d dataNew
+bzip2: Can't guess original name for dataNew -- using dataNew.out
+bandit12@melinda:/tmp/vvv$ ls
+data.txt  dataNew.out
+bandit12@melinda:/tmp/vvv$ file dataNew.out
+dataNew.out: gzip compressed data, was "data4.bin", from Unix, last modified: Fri Nov 14 10:32:20 2014, max compression
+bandit12@melinda:/tmp/vvv$ zcat dataNew.out > evenNewer
+bandit12@melinda:/tmp/vvv$ ls
+data.txt  dataNew.out  evenNewer
+bandit12@melinda:/tmp/vvv$ file evenNewer
+evenNewer: POSIX tar archive (GNU)
+bandit12@melinda:/tmp/vvv$ tar -xvf evenNewer
+data5.bin
+bandit12@melinda:/tmp/vvv$ file data5.bin
+data5.bin: POSIX tar archive (GNU)
+bandit12@melinda:/tmp/vvv$ tar -xvf data5.bin
+data6.bin
+bandit12@melinda:/tmp/vvv$ file data6.bin
+data6.bin: bzip2 compressed data, block size = 900k
+bandit12@melinda:/tmp/vvv$ bzip2 -d data6.bin
+bzip2: Can't guess original name for data6.bin -- using data6.bin.out
+bandit12@melinda:/tmp/vvv$ ls
+data.txt  data5.bin  data6.bin.out  dataNew.out  evenNewer
+bandit12@melinda:/tmp/vvv$ file data6.bin.out
+data6.bin.out: POSIX tar archive (GNU)
+bandit12@melinda:/tmp/vvv$ tar -xvf data6.bin.out
+data8.bin
+bandit12@melinda:/tmp/vvv$ file data8.bin
+data8.bin: gzip compressed data, was "data9.bin", from Unix, last modified: Fri Nov 14 10:32:20 2014, max compression
+bandit12@melinda:/tmp/vvv$ zcat data8.bin > lost
+bandit12@melinda:/tmp/vvv$ ls
+data.txt  data5.bin  data6.bin.out  data8.bin  dataNew.out  evenNewer  lost
+bandit12@melinda:/tmp/vvv$ file lost
+lost: ASCII text
+bandit12@melinda:/tmp/vvv$ cat lost
+  
 
-  }    
-    bandit12@melinda:/tmp/simple-plan$ cat data8 
-    The password is 8ZjyCRiBWFYkneahHwxCv3wb2a1ORpYL
   
   
 ####level 13 to Level 14
@@ -239,22 +326,57 @@
 * password = 8ZjyCRiBWFYkneahHwxCv3wb2a1ORpYL
 
   ######Things we have to do and the results
-  bandit13@melinda:~$ ls
-    sshkey.private
-    bandit13@melinda:~$ cat sshkey.private
-    -----BEGIN RSA PRIVATE KEY-----
-    MIIEpAIBAAKCAQEAxkkOE83W2cOT7IWhFc9aPaaQmQDdgzuXCv+ppZHa++buSkN+
-    gg0tcr7Fw8NLGa5+Uzec2rEg0WmeevB13AIoYp0MZyETq46t+jk9puNwZwIt9XgB
-    ZufGtZEwWbFWw/vVLNwOXBe4UWStGRWzgPpEeSv5Tb1VjLZIBdGphTIK22Amz6Zb
-{
-}
-    bandit13@melinda:~$ ssh -i ./sshkey.private bandit14@localhost
-    Could not create directory '/home/bandit13/.ssh'.
-    The authenticity of host 'localhost (127.0.0.1)' can't be established.
-    ECDSA key fingerprint is 91:b4:28:0b:9a:4d:0c:b6:39:1f:8f:68:89:4a:ce:92.
-    Are you sure you want to continue connecting (yes/no)? yes
-    
-    bandit14@melinda:~$ cat /etc/bandit_pass/bandit14
+  The password for the next level is stored in /etc/bandit_pass/bandit14 and can only be read by user bandit14
+  
+bandit12@melinda:~$ ls
+data.txt
+bandit12@melinda:~$ file data.txt
+data.txt: ASCII text
+bandit12@melinda:~$ mkdir /tmp/vvv
+bandit12@melinda:~$ cd /tmp/vvv
+bandit12@melinda:/tmp/vvv$ xxd -r ~/data.txt > data.txt
+bandit12@melinda:/tmp/vvv$ file data.txt
+data.txt: gzip compressed data, was "data2.bin", from Unix, last modified: Fri Nov 14 10:32:20 2014, max compression
+bandit12@melinda:/tmp/vvv$ zcat data.txt > dataNew
+bandit12@melinda:/tmp/vvv$ ls
+data.txt  dataNew
+bandit12@melinda:/tmp/vvv$ file dataNew
+dataNew: bzip2 compressed data, block size = 900k
+bandit12@melinda:/tmp/vvv$ bzip2 -d dataNew
+bzip2: Can't guess original name for dataNew -- using dataNew.out
+bandit12@melinda:/tmp/vvv$ ls
+data.txt  dataNew.out
+bandit12@melinda:/tmp/vvv$ file dataNew.out
+dataNew.out: gzip compressed data, was "data4.bin", from Unix, last modified: Fri Nov 14 10:32:20 2014, max compression
+bandit12@melinda:/tmp/vvv$ zcat dataNew.out > evenNewer
+bandit12@melinda:/tmp/vvv$ ls
+data.txt  dataNew.out  evenNewer
+bandit12@melinda:/tmp/vvv$ file evenNewer
+evenNewer: POSIX tar archive (GNU)
+bandit12@melinda:/tmp/vvv$ tar -xvf evenNewer
+data5.bin
+bandit12@melinda:/tmp/vvv$ file data5.bin
+data5.bin: POSIX tar archive (GNU)
+bandit12@melinda:/tmp/vvv$ tar -xvf data5.bin
+data6.bin
+bandit12@melinda:/tmp/vvv$ file data6.bin
+data6.bin: bzip2 compressed data, block size = 900k
+bandit12@melinda:/tmp/vvv$ bzip2 -d data6.bin
+bzip2: Can't guess original name for data6.bin -- using data6.bin.out
+bandit12@melinda:/tmp/vvv$ ls
+data.txt  data5.bin  data6.bin.out  dataNew.out  evenNewer
+bandit12@melinda:/tmp/vvv$ file data6.bin.out
+data6.bin.out: POSIX tar archive (GNU)
+bandit12@melinda:/tmp/vvv$ tar -xvf data6.bin.out
+data8.bin
+bandit12@melinda:/tmp/vvv$ file data8.bin
+data8.bin: gzip compressed data, was "data9.bin", from Unix, last modified: Fri Nov 14 10:32:20 2014, max compression
+bandit12@melinda:/tmp/vvv$ zcat data8.bin > lost
+bandit12@melinda:/tmp/vvv$ ls
+data.txt  data5.bin  data6.bin.out  data8.bin  dataNew.out  evenNewer  lost
+bandit12@melinda:/tmp/vvv$ file lost
+lost: ASCII text
+bandit12@melinda:/tmp/vvv$ cat lost
     4wcYUJFw0k0XLShlDzztnTBHiqxU3b3e
     
     
@@ -264,6 +386,8 @@
 * password = 4wcYUJFw0k0XLShlDzztnTBHiqxU3b3e
 
   ######Things we have to do and the results
+  the password for the next level can be retrieved by submitting the password of the current level to port 30000 on localhost
+  
     bandit14@melinda:~$ echo 4wcYUJFw0k0XLShlDzztnTBHiqxU3b3e | nc -v localhost 30000
     Connection to localhost 30000 port [tcp/*] succeeded!
     Correct!
@@ -276,6 +400,8 @@
 * password = BfMYroe26WYalil77FoDi9qh59eK5xNr
 
   ######Things we have to do and the results
+  The password for the next level can be retrieved by submitting the password of the current level to port 30001 on localhost using SSL encryption
+  
     bandit15@melinda:~$ echo BfMYroe26WYalil77FoDi9qh59eK5xNr | openssl s_client -quiet -connect localhost:30001
     depth=0 CN = localhost
     verify error:num=18:self signed certificate
@@ -292,9 +418,10 @@
 * password = cluFn7wTiGryunymYOu4RcffSxQluehd
 
   ######Things we have to do and the results
+  
     bandit16@melinda:~$ nmap -sT localhost -p31000-32000
     
-    Starting Nmap 5.21 ( http://nmap.org ) at 2014-01-22 09:25 UTC
+    Starting Nmap 5.21 ( http://nmap.org ) at 2015-08-19 09:25 UTC
     Nmap scan report for localhost (127.0.0.1)
     Host is up (0.0013s latency).
     Not shown: 996 closed ports
@@ -350,9 +477,12 @@
 
 
 ####level 17 to Level 18
+* username = bandit17
+* password = cluFn7wTiGryunymYOu4RcffSxQluehd
 
 
   ######Things we have to do and the results
+  
     bandit17@melinda:~$ ls
     passwords.new  passwords.old
     bandit17@melinda:~$ diff passwords.new passwords.old
@@ -367,7 +497,38 @@
 * username = bandit18
 * password = kfBf3eYk5BPBRzwjqutbbfE887SVc5Yd
 
+ ######Things we have to do and the results
  
+ Byebye !
+Connection to bandit.labs.overthewire.org closed.
+
+[root@localhost Desktop]# ssh bandit18@bandit.labs.overthewire.org cat readme
+bandit18@bandit.labs.overthewire.org's password: 
+IueksS7Ubh8G3DCwVzrTd8rAVOwq3M5x
+
+
+
+
+####level 19 to Level 20
+
+* username = bandit19
+* password = GbKksEFF4yrVs6il55v6gwY5aVje5f0j
+
+ ######Things we have to do and the results
+ 
+bandit19@melinda:~$ ls
+bandit20-do
+bandit19@melinda:~$ ./bandit20-do
+Run a command as another user.
+  Example: ./bandit20-do id
+bandit19@melinda:~$ ./bandit20-do id
+uid=11019(bandit19) gid=11019(bandit19) euid=11020(bandit20) groups=11020(bandit20),11019(bandit19)
+bandit19@melinda:~$ ./bandit20-do whoami
+bandit20
+bandit19@melinda:~$ ./bandit20-do cat /etc/bandit_pass/bandit20
+GbKksEFF4yrVs6il55v6gwY5aVje5f0j
+
+
     
     
 
